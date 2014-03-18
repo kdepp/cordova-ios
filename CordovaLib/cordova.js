@@ -955,6 +955,7 @@ function iOSExec() {
     }
 
     actionArgs = massageArgsJsToNative(actionArgs);
+	actionArgs = Array.prototype.slice.call(actionArgs);
 
     var command = [callbackId, service, action, actionArgs];
 
